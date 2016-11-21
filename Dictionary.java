@@ -16,8 +16,11 @@ public class Dictionary {
 	
 	public Dictionary(String fileName) throws FileNotFoundException {
 		Scanner scan = new Scanner(new File(fileName));
+		this.wordsList = new ArrayList<String>();
+		// On enregistre pas le nombre de mots
+		scan.next();
 		while(scan.hasNext()) {
-			System.out.println(scan.next());
+			this.wordsList.add(scan.next());
 		}
 	}
 	
