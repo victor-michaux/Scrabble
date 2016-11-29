@@ -18,15 +18,19 @@ public class ScrabbleConsole {
 		}
 		System.out.println("Please enter a word :");
 		Scanner scan = new Scanner(System.in);
-		String word = scan.nextLine();
+		/*String word = scan.nextLine();
 		System.out.println("Please enter a letter list :");
 		char letters[] = scan.nextLine().toCharArray();
 		if(dico.mayBeComposed(word, letters)) {
 			System.out.println(word + " may be composed with letters : " + Arrays.toString(letters));
 		} else {
 			System.out.println(word + " may NOT be composed with letters : " + Arrays.toString(letters));
-		}
-		
+		}*/
+		System.out.println("Please enter a letter list:");
+		char lettres[] = scan.nextLine().toCharArray();
+		ArrayList <String> tabMots = dico.getWordsThatCanBeComposed(lettres);
+		System.out.print(tabMots.size() + " matching words found : ");
+		System.out.println(Arrays.toString(tabMots.toArray()));
 	}
 	
 	public static void main(String[] args) {
