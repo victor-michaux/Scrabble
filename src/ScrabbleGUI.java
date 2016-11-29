@@ -48,7 +48,6 @@ public class ScrabbleGUI extends JFrame{
 		panelCenter.setLayout(new BorderLayout());
 		
 		this.searchButton.addActionListener(new ActionListener() {
-			@Override
 			public void actionPerformed(ActionEvent e) {
 				wordListTextArea.setText("");
 				String textEntered = letterTextField.getText();
